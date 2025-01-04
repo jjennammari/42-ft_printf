@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 22:58:27 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/03 21:42:37 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/04 19:21:19 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,24 @@ int	ft_print_format(char specifier, va_list ap)
 
 	count = 0;
 	if (specifier == c)
-		count += ft_print_char(ap);
+		count += ft_print_char(va_arg(ap, int));
 	else if (specifier == s)
-		count += ft_print_str(ap);
+		count += ft_print_str(va_arg(ap, char *));
 	else if (specifier == p)
-		count += ft_print_pointer(ap);
+		count += ft_print_pointer(va_arg(ap, void *));
 	else if (specifier == d || specifier == i)
 		count += ft_print_digit(ap);
 	else if (specifier == u)
-		count += ft_print_decimal(ap);
+		count += ft_print_decimal(va_arg(ap, unsigned int));
 	else if (specifier == x)
 		count += ft_print_hex_lowcase(ap);
 	else if (specifier == X)
 		count += ft_print_hex_uppercase(ap);
 	else (specifier == %)
-		write (1, %, 1);
+	{
+		write (1, '%', 1);
+		count++;
+	}
 	return (count);
 }
 
