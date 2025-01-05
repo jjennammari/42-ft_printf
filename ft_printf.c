@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 22:58:27 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/04 21:19:18 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/05 22:53:35 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int	ft_print_format(char specifier, va_list ap)
 	int	count;
 
 	count = 0;
-	if (specifier == c)
+	if (specifier == 'c')
 		count += ft_print_char(va_arg(ap, int));
-	else if (specifier == s)
+	else if (specifier == 's')
 		count += ft_print_str(va_arg(ap, char *));
-	else if (specifier == p)
+	else if (specifier == 'p')
 		count += ft_print_pointer(va_arg(ap, void *));
-	else if (specifier == d || specifier == i)
+	else if (specifier == 'd' || specifier == 'i')
 		count += ft_print_digit(va_arg(ap, int);
-	else if (specifier == u)
+	else if (specifier == 'u')
 		count += ft_print_unsigned(va_arg(ap, unsigned int));
-	else if (specifier == x)
+	else if (specifier == 'x')
 		count += ft_print_hex_lowcase(ap);
-	else if (specifier == X)
+	else if (specifier == 'X')
 		count += ft_print_hex_uppercase(ap);
-	else (specifier == %)
+	else (specifier == '%')
 	{
 		write (1, '%', 1);
 		count++;
