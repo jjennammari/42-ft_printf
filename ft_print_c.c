@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_print_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 23:45:23 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/08 23:11:34 by jemustaj         ###   ########.fr       */
+/*   Created: 2025/01/04 20:44:16 by jemustaj          #+#    #+#             */
+/*   Updated: 2025/01/08 23:18:19 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#include "printf.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdarg.h>
-# include <stdlib.h>
-
-int	ft_printf(const char *format, ...);
-int	ft_print_c(int c);
-int	ft_print_s(char *str);
-int	ft_print_prt(unsigned long long ptr);
-int	ft_print_d(int nb, int count);
-int	ft_print_u(unsigned int nb, char *base);
-int	ft_print_xX(unsigned int, char *base);
-
-#endif
+int	ft_print_c(int c)
+{
+	return (write (1, &c, 1));
+}
