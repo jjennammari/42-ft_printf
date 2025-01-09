@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 22:58:27 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/09 00:23:28 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/09 19:29:42 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_print_format(char specifier, va_list ap)
 	else if (specifier == 's')
 		count += ft_print_s(va_arg(ap, char *));
 	else if (specifier == 'p')
-		count += ft_print_prt(va_arg(ap, unsigned long long));
+		count += ft_print_p(va_arg(ap, unsigned long long), 0);
 	else if (specifier == 'd' || specifier == 'i')
 		count += ft_print_d(va_arg(ap, int), 0);
 	else if (specifier == 'u')

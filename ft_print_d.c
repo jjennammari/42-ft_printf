@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 19:08:36 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/09 00:16:55 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/09 18:31:21 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_print_d(int nb, int count)
 {
+	if (!nb)
+		return (count += ft_print_c ('0'));
 	if (nb < 0)
 	{
 		count += ft_print_c ('-');

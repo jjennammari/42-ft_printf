@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 23:45:23 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/09 00:24:29 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/09 19:23:20 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int	ft_printf(const char *format, ...);
 int	ft_print_c(int c);
 int	ft_print_s(char *str);
-int	ft_print_prt(unsigned long long ptr);
+int	ft_print_p(unsigned long long ptr, int count);
 int	ft_print_d(int nb, int count);
 int	ft_print_u(unsigned int nb, int count);
 int	ft_print_xX(unsigned int, char *base, int count);
