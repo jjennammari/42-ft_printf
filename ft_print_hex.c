@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_d.c                                       :+:      :+:    :+:   */
+/*   ft_print_xX.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/06 19:08:36 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/09 18:31:21 by jemustaj         ###   ########.fr       */
+/*   Created: 2025/01/08 01:30:07 by jemustaj          #+#    #+#             */
+/*   Updated: 2025/01/09 20:03:46 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_print_d(int nb, int count)
+int	ft_print_hex(unsigned int nb, char *base, int count)
 {
-	if (!nb)
-		return (count += ft_print_c ('0'));
-	if (nb < 0)
-	{
-		count += ft_print_c ('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-		 count = ft_print_d(nb / 10, count);
-	count += ft_print_c(nb % 10 + '0');
+	if (nb >= 16)
+		count += ft_print_hex ((nb / 16), base, count);
+	count += ft_print_c (base[nb % 16]);
 	return (count);
 }

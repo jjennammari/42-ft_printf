@@ -6,7 +6,7 @@
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 19:49:16 by jemustaj          #+#    #+#              #
-#    Updated: 2025/01/09 19:30:11 by jemustaj         ###   ########.fr        #
+#    Updated: 2025/01/09 22:32:01 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ CFLAGS = -Wall -Wextra -Werror -g
 AR = ar -rsc
 RM = rm -rf
 
-SRC = ft_printf.c ft_print_c.c ft_print_s.c ft_print_d.c \
-      ft_print_p.c ft_print_u.c ft_print_xX.c
+SRC = ft_printf.c ft_print_c.c ft_print_s.c ft_print_di.c \
+      ft_print_p.c ft_print_u.c ft_print_hex.c
 OBJC = $(SRC:.c=.o)
 
 TEST_SRC = main_printf.c

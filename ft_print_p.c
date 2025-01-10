@@ -6,13 +6,13 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:54:37 by jemustaj          #+#    #+#             */
-/*   Updated: 2025/01/09 20:44:12 by jemustaj         ###   ########.fr       */
+/*   Updated: 2025/01/09 22:42:02 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int     ft_prt(unsigned long long ptr, int count);
+int	ft_prt(unsigned long long ptr, int count);
 
 int	ft_print_p(unsigned long long ptr, int count)
 {
