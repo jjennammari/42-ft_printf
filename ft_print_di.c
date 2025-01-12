@@ -10,10 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libftprintf.h"
 
 int	ft_print_di(int nb, int count)
 {
+	if (nb == -2147483648)
+	{
+		count += ft_print_c('-');
+		count += ft_print_c('2');
+		nb = 147483648;
+	}
 	if (nb < 0)
 	{
 		count += ft_print_c ('-');
